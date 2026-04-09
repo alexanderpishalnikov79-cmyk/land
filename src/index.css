@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Archivo Narrow", sans-serif;
+  --font-body: "Archivo Narrow", sans-serif;
+  --font-accent: "Archivo Black", sans-serif;
+  --color-midnight: #050816;
+  --color-panel: rgba(11, 15, 30, 0.6);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.landing-bright,
+.landing-bright * {
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.045em;
+  font-stretch: condensed;
+}
+
+h1,
+h2,
+h3,
+.landing-bright .font-display {
+  font-family: var(--font-display) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.045em;
+}
+
+@utility section-shell {
+  @apply relative mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6;
+}
+
+@utility section-heading {
+  @apply max-w-3xl space-y-2;
+}
+
+@utility section-kicker {
+  @apply inline-flex rounded-[0.35rem] border border-slate-950/14 bg-[#edf1f4] px-3.5 py-1.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-slate-950;
+  font-family: var(--font-accent);
+}
+
+@utility section-title {
+  @apply font-display text-4xl leading-[0.78] tracking-[-0.045em] text-slate-950 text-balance sm:text-5xl lg:text-[3.05rem];
+}
+
+@utility section-copy {
+  @apply text-[15px] leading-7 text-slate-800 sm:text-base;
+}
+
+@utility glass-panel {
+  background:
+    linear-gradient(180deg, rgba(238, 242, 246, 0.98), rgba(220, 226, 233, 0.97)),
+    rgba(228, 233, 239, 0.98);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  box-shadow:
+    0 16px 34px rgba(15, 23, 42, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.42) inset;
+  backdrop-filter: blur(10px);
+  border-radius: 0.75rem;
+}
+
+@utility glass-card {
+  @apply glass-panel p-5 sm:p-6;
+}
+
+@utility cta-primary {
+  @apply inline-flex items-center gap-3 rounded-[0.45rem] bg-[#f80000] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white shadow-[0_18px_48px_rgba(248,0,0,0.3)] transition duration-300 hover:scale-[1.02] hover:bg-[#ff1a1a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050816] sm:px-6 sm:text-sm;
+  animation: pulse-cta 2.6s ease-in-out infinite;
+  font-family: var(--font-accent);
+}
+
+@utility icon-button {
+  @apply flex h-11 w-11 items-center justify-center rounded-[0.45rem] border border-slate-950/12 bg-[#e4e9ee] text-slate-900 transition hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#c5cbd2];
+}
+
+@utility field-label {
+  @apply text-[12px] font-semibold uppercase tracking-[0.22em] text-slate-700;
+  font-family: var(--font-accent);
+}
+
+@utility field-input {
+  @apply rounded-[0.45rem] border border-slate-950/14 bg-[#f1f5f8] px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-slate-500/40 focus:ring-2 focus:ring-slate-400/15 sm:px-5 sm:py-4;
+}
+
+@utility floating-cta {
+  @apply fixed bottom-4 left-1/2 z-50 inline-flex -translate-x-1/2 items-center justify-center rounded-[0.45rem] bg-[#f80000] px-5 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white shadow-[0_18px_48px_rgba(248,0,0,0.35)] backdrop-blur-lg transition hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#c5cbd2] sm:bottom-6 sm:right-6 sm:left-auto sm:translate-x-0 xl:bottom-8 xl:right-8;
+  font-family: var(--font-accent);
+}
+
+.landing-bright .text-white {
+  color: #111827 !important;
+  font-family: var(--font-display) !important;
+}
+
+.landing-bright .text-slate-300,
+.landing-bright .text-slate-200 {
+  color: #334155 !important;
+}
+
+.landing-bright .text-slate-400,
+.landing-bright .text-slate-500 {
+  color: #475569 !important;
+}
+
+.landing-bright .bg-white\/6,
+.landing-bright .bg-white\/8,
+.landing-bright .bg-white\/5 {
+  background-color: rgba(237, 240, 244, 0.92) !important;
+}
+
+.landing-bright .border-white\/10,
+.landing-bright .border-white\/15 {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+.landing-bright .bg-slate-950\/35,
+.landing-bright .bg-slate-950\/45,
+.landing-bright .bg-slate-950\/70 {
+  background-color: rgba(222, 226, 231, 0.96) !important;
+}
+
+.landing-bright .text-xs.uppercase,
+.landing-bright .text-sm.uppercase,
+.landing-bright button,
+.landing-bright .cta-primary,
+.landing-bright .floating-cta,
+.landing-bright label {
+  font-family: var(--font-accent) !important;
+}
+
+.landing-bright .text-amber-300,
+.landing-bright .text-amber-600 {
+  color: #475569 !important;
+}
+
+.landing-bright .border-amber-300\/30,
+.landing-bright .border-amber-300\/40 {
+  border-color: rgba(71, 85, 105, 0.2) !important;
+}
+
+.landing-bright .bg-amber-500\/12,
+.landing-bright .bg-amber-500\/14 {
+  background-color: rgba(71, 85, 105, 0.08) !important;
+}
+
+@keyframes pulse-cta {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 18px 48px rgba(248, 0, 0, 0.28);
+  }
+  50% {
+    transform: translateY(-1px);
+    box-shadow: 0 22px 60px rgba(248, 0, 0, 0.42);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

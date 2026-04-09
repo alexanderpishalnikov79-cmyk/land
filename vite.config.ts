@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-const base = process.env.GITHUB_ACTIONS ? "/-/" : "/";
+const base = process.env.GITHUB_ACTIONS ? "/land/" : "/";
 
 export default defineConfig({
   base,

@@ -1,13 +1,15 @@
 import { Check, X } from "lucide-react";
 import { compareCards } from "../data/landingContent";
 
+const compareImage = `${import.meta.env.BASE_URL}images/10.webp`;
+
 export function CompareSection() {
   return (
     <section className="section-shell">
       <div className="grid items-start gap-4">
         <div className="glass-card mx-auto w-full border-slate-950/10 xl:max-w-[46rem] xl:px-4 xl:pb-4 xl:pt-4">
           <img
-            src="/images/10.webp"
+            src={compareImage}
             alt="Пример за по-лесно движение след курс"
             className="w-full rounded-[1.35rem] border border-white/10 object-cover xl:min-h-[22rem]"
             loading="lazy"

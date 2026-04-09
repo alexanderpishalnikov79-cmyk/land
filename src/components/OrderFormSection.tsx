@@ -3,6 +3,8 @@ type OrderFormSectionProps = {
   seconds: string;
 };
 
+const orderProductImage = `${import.meta.env.BASE_URL}images/product 2.png`;
+
 export function OrderFormSection({ minutes, seconds }: OrderFormSectionProps) {
   return (
     <section className="section-shell" id="to_form">
@@ -10,7 +12,7 @@ export function OrderFormSection({ minutes, seconds }: OrderFormSectionProps) {
         <div className="glass-panel top-6 h-fit border-slate-950/12 p-5 sm:p-6 xl:sticky">
           <div className="text-xs uppercase tracking-[0.28em] text-slate-400">Официална форма за поръчка</div>
           <img
-            src="/images/product 2.png"
+            src={orderProductImage}
             alt="Steplex крем"
             className="mx-auto mt-6 w-full max-w-[15rem] drop-shadow-[0_28px_70px_rgba(0,0,0,0.5)] sm:max-w-sm"
             loading="lazy"

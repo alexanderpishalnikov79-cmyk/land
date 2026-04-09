@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { clinicalResults } from "../data/landingContent";
 
+const productImage = `${import.meta.env.BASE_URL}images/9.png`;
+
 export function ClinicalResults() {
   return (
     <section className="section-shell">
@@ -12,7 +14,7 @@ export function ClinicalResults() {
             </h2>
           </div>
           <img
-            src="/images/9.png"
+            src={productImage}
             alt="Steplex продуктова опаковка"
             className="w-full max-w-sm self-center drop-shadow-[0_28px_70px_rgba(0,0,0,0.45)] xl:w-[31%] xl:max-w-none xl:self-start"
             loading="lazy"

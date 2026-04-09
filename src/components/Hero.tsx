@@ -4,6 +4,8 @@ type HeroProps = {
   packsLeft: number;
 };
 
+const heroImage = `${import.meta.env.BASE_URL}images/1.png`;
+
 export function Hero({ packsLeft: _packsLeft }: HeroProps) {
   return (
     <section className="relative overflow-hidden px-4 pb-3 pt-3 sm:px-6 lg:px-8 lg:pb-6 lg:pt-6">
@@ -29,7 +31,7 @@ export function Hero({ packsLeft: _packsLeft }: HeroProps) {
 
             <div className="relative z-10 h-full p-0 xl:border-l xl:border-slate-950/10 xl:pl-4">
               <img
-                src="/images/1.png"
+                src={heroImage}
                 alt="Steplex header"
                 className="h-full min-h-full w-full object-cover xl:max-h-none"
                 loading="eager"

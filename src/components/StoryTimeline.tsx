@@ -27,6 +27,8 @@ const copyVariants = {
   },
 };
 
+const storyReasonImage = `${import.meta.env.BASE_URL}images/6.png`;
+
 export function StoryTimeline() {
   const prefersReducedMotion = useReducedMotion();
 
@@ -106,7 +108,7 @@ export function StoryTimeline() {
             className="rounded-[1.9rem] shadow-[0_18px_55px_rgba(15,23,42,0.08)]"
           >
             <motion.img
-              src="/images/6.png"
+              src={storyReasonImage}
               alt="Илюстрация към причината за болката"
               variants={prefersReducedMotion ? undefined : mediaVariants}
               initial={prefersReducedMotion ? undefined : "hidden"}

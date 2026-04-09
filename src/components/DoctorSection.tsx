@@ -4,6 +4,9 @@ import { courseResults, doctorBullets } from "../data/landingContent";
 
 const icons = [HeartPulse, FlaskConical, ShieldPlus, Sparkles];
 const resultIcons = [Droplets, Zap, TrendingDown, Waves];
+const productImage = `${import.meta.env.BASE_URL}images/product 2.png`;
+const jointImage = `${import.meta.env.BASE_URL}images/7.webp`;
+const doctorImage = `${import.meta.env.BASE_URL}images/8.png`;
 
 export function DoctorSection() {
   const rotateX = useSpring(useMotionValue(0), { stiffness: 120, damping: 18 });
@@ -49,7 +52,7 @@ export function DoctorSection() {
           <div className="absolute bottom-14 right-12 h-40 w-40 rounded-full bg-[radial-gradient(circle,_rgba(30,41,59,0.14),_transparent_70%)] blur-2xl" />
 
           <motion.img
-            src="/images/product 2.png"
+            src={productImage}
             alt="Steplex крем"
             animate={{ rotateZ: [0, 2, -2, 0] }}
             transition={{
@@ -67,7 +70,7 @@ export function DoctorSection() {
           className="glass-card h-full border-slate-950/12"
         >
           <img
-            src="/images/7.webp"
+            src={jointImage}
             alt="Схема на става и ставна течност"
             className="aspect-[1.12/1] w-full rounded-[1rem] border border-white/10 object-cover"
             loading="lazy"
@@ -96,7 +99,7 @@ export function DoctorSection() {
       >
         <div className="grid gap-0 items-stretch lg:grid-cols-[0.3fr_0.7fr]">
           <img
-            src="/images/8.png"
+            src={doctorImage}
             alt="Д-р Орлин Филипов"
             className="h-full min-h-full w-full self-stretch object-cover lg:max-h-[520px]"
             loading="lazy"
